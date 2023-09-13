@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Data Analysis Results</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Include the CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script> <!-- Include DataTables JavaScript -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css"> <!-- Include DataTables CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script> <!-- Include jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.4/jspdf.plugin.autotable.min.js"></script> <!-- Include jsPDF AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+</head>
+<body>
+    <!-- ... Rest of your HTML ... -->
+
+    <!-- Add a button to download CSV -->
+    <button id="downloadXLS">Download XLS</button>
+    
+    <!-- Add a button to download PDF -->
+    <button id="downloadPDF">Download PDF</button>
+
+    <!-- Table for displaying results -->
+    <table id="resultsTable" class="display">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Students with Highest Mark</th>
+                <th>Highest Mark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results data will be inserted here using JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script> <!-- Include your script.js file -->
+    <script>
+        // Fetch and display results when the page loads
+        $(document).ready(function() {
+            fetchAndDisplayResults();
+        });
+    </script>
+</body>
+</html>
